@@ -146,6 +146,49 @@ console.log("final:",arr)
 
 
 
+//array methhods
+
+
+{
+    let a=[1,2,3,4,5]
+    let result = a.forEach((item)=>{
+        console.log("item:",item)
+        return item > 30
+
+    });
+    console.log("result:",result)
+
+
+    let resul1=a.find((item)=>{
+        return item > 4
+       
+    })
+    console.log("result1:",resul1)
+}
+
+
+
+
+//constructor functions
+
+
+function person(name,age,place){
+    this.name=name;
+    this.age=age;
+    this.place=place;
+    this.greeting= function() {
+        console.log(`Hai,${this.name},age is ${this.age},placeis ${this.place}`);
+    }
+}
+let person1=new person("crisil",20,"ernakulam");
+console.log("person1:",person1);
+person1.greeting();
+
+
+// updating individual objects
+
+person1.address="my address";
+console.log("person1:",person1)
 
 
 
