@@ -192,6 +192,51 @@ console.log("person1:",person1)
 
 
 
+// 
+
+class Animal{
+    animal;
+    gender;
+
+
+    constructor(animal,gender){
+        this.animal=animal;
+    this.gender=gender;
+    }
+      greeting(){
+        console.log(`it is a ${this.animal} and it is ${this.gender}`)
+    }
+    
+}
+let animal2= new Animal("tiger","male")
+console.log("animal2:",animal2)
+animal2.greeting();
+
+
+// ->>>>>>>>>>>>>>>
+//Inheritance
+
+class dog extends Animal{
+    name;
+
+constructor(animal,name,color){
+    super(animal);//Calls parents constructor
+this.name=name;
+this.color=color;
+}
+
+// Method overidding
+
+greeting() {
+    console.log(`${this.animal},name is ${this.name} and he is ${this.color}`);
+}
+}
+
+let dog1=new dog("lab","Ivar","black");
+console.log("dog1:",dog1)
+dog1.greeting()
+
+
 
 
 
