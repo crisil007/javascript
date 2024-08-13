@@ -240,3 +240,49 @@ dog1.greeting()
 
 
 
+// //  
+// let xhr=new XMLHttpRequest();
+// console.log("xhr:",xhr);
+// xhr.open('get','https://jsonplaceholder.typicode.com/users')
+
+
+
+
+
+
+
+
+// promise ,then,catch
+
+
+let data=[
+    {
+        id:1,
+        name:"john",
+        age:34
+    },
+    {
+        id:2,
+        name:"joy",
+        age:30
+    }
+];
+console.log("data:",data)
+
+function findUser(id){
+    let user=data.find(data=>data.id===id)
+    return user;
+
+}
+let user=findUser(2)
+console.log("user:",user)
+
+
+function findUser(id){
+    let user=data.find(data=>data.id===id)
+    // return user;
+    setTimeout(()=>{
+        return user;
+    },1000)
+
+}
