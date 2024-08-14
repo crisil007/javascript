@@ -286,3 +286,26 @@ function findUser(id){
     },1000)
 
 }
+
+
+//regular Expressions
+
+
+
+const str1="hello world";
+const str2="I am crisil";
+const str3="there is a place";
+
+
+const regexp1=/d/;
+const result1=regexp1.test(str1);
+console.log("result1:",result1)
+
+const regexp2=/D/i;
+const result2=regexp2.test(str1);
+console.log(result2)
+
+
+const regexp3=/[a-z0-9]m/i;
+const result3=regexp3.test(str2)
+console.log(result3)
