@@ -321,3 +321,15 @@ console.log("result4:",result4)
 const regexp5=/world$/;
 const result5=regexp5.test(str3);
 console.log("result5:",result5)
+
+
+const regexp6=/[jkv]/;
+const result6=regexp6.test(str2);
+console.log("result6:",result6);
+
+
+
+const regexp7=/[^i]/;
+const result7=regexp7.test(str2);
+console.log("result7:",result7);
+
