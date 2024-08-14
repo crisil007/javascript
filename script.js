@@ -309,3 +309,15 @@ console.log(result2)
 const regexp3=/[a-z0-9]m/i;
 const result3=regexp3.test(str2)
 console.log(result3)
+
+
+const regexp4=/^There/i;
+const result4=regexp4.test(str3);
+console.log("result4:",result4)
+
+
+
+
+const regexp5=/world$/;
+const result5=regexp5.test(str3);
+console.log("result5:",result5)
