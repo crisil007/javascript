@@ -24,12 +24,15 @@ xhr.onreadystatechange = function () {
         console.log("products:",products)
 
 let box=''
-for(let i=0;i<data.length;i++){
+for(let i=1;i<4;i++){
 box=box+`
 
-<div class="boxes">
-<div>${data[i].title}</div>
-
+<div class="boxes pt-3">
+<div class="p-3">${(data[i].title).slice(0,30)+"..."}</div>
+<img src=${data[i].image} class="pt-5">
+<div class="p-3 text-center">${(data[i].description).slice(0,30)+"..."}</div>
+<div class="pt-3 text-center">${"$"+(data[i].price)}</div>
+<button id="btn" onclick=loadData(${data[i].id})> hello</button>
 </div>
 
 
@@ -37,9 +40,45 @@ box=box+`
 
 `
 }
+for(let i=4;i<7;i++){
+    box=box+`
+    
+    <div class="boxes pt-3">
+    <div class="p-3">${(data[i].title).slice(0,30)+"..."}</div>
+    <img src=${data[i].image} class="pt-5">
+    <div class="p-3 text-center">${(data[i].description).slice(0,30)+"..."}</div>
+    <div class="pt-3 text-center">${"$"+(data[i].price)}</div>
+    <button id="btn" onclick=loadData(${data[i].id})> hello</button>
+    </div>
+    
+    
+    
+    
+    `
+    }
+    for(let i=9;i<14;i++){
+        box=box+`
+        
+        <div class="boxes pt-3">
+        <div class="p-3">${(data[i].title).slice(0,30)+"..."}</div>
+        <img src=${data[i].image} class="pt-5">
+        <div class="p-3 text-center">${(data[i].description).slice(0,30)+"..."}</div>
+        <div class="text-center">${"$"+(data[i].price)}</div>
+        <button id="btn" onclick=loadData(${data[i].id})> View More</button>
+        </div>
+        
+        
+        
+        
+        `
+        }
 console.log("box:",box)
 products.innerHTML=box;
    
 }
 }
+}
+function loadData(id){
+    console.log("button clicked")
+    console.log(id)
 }
