@@ -10,11 +10,11 @@ async function Datas() {
         let row = '';
         for (let i = 0; i < parsed_datas.length; i++) {
             row = row + `
-             <div class="border">
-                <div><img src="${parsed_datas[i].image}"></div>
-                <div>${parsed_datas[i].title}</div>
-                <div>${(parsed_datas[i].description).slice(0.20)+"......"}</div>
-                <div>${parsed_datas[i].price}</div>
+             <div id="boxes">
+                <div class="pb-3"><img src="${parsed_datas[i].image}"></div>
+                <div>${(parsed_datas[i].title).slice(0,15)+"...."}</div>
+                <div>${(parsed_datas[i].description).slice(0,15)+"...."}</div>
+                <div class="link-danger pt-2">$${parsed_datas[i].price}</div>
              </div>`
         }
         data.innerHTML = row;
