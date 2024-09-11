@@ -292,7 +292,7 @@ function findUser(id){
 
 
 
-const str1="hello world";
+const str1="hello";
 const str2="I am crisil";
 const str3="there is a place";
 
@@ -333,3 +333,43 @@ const regexp7=/[^i]/;
 const result7=regexp7.test(str2);
 console.log("result7:",result7);
 
+
+
+const regexp8=/l{2}o$/i; 
+const result8=regexp8.test(str1)
+console.log("result8:",result8)
+
+
+const regexp9=/\D/i;
+const result9=regexp9.test(str1);
+console.log("result9:",result9)
+
+
+
+
+
+
+const regexpDate= /^\d{1,2}-\d{1,2}-\d{4}$/i;
+
+function checkResult(value){
+    console.log("value check:",value)
+    const result=regexpDate.test(value);
+    
+
+
+}
+
+
+
+{
+
+let dateString ="16-12-2003"
+let regex=/-\d+-/;
+const result=dateString.match(regex);
+console.log("result:",result)
+
+
+let regex1=/(?<=-)\d+(?=-)/;
+const resultt=dateString.match(regex1);
+console.log("resultt:",resultt)
+}
